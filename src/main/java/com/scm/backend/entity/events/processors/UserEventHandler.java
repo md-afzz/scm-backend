@@ -18,12 +18,15 @@ public class UserEventHandler {
 
     @HandleBeforeSave
     public void handleUserBeforeSave(User user){
-        user.setUserId(UUID.randomUUID().toString());
+        log.info("User saved in progress now !! {}", user.getUserId());
         // Also , encrypt password here , for hashing purpose...
+//        FOR EVERY SAVE , UPDATE i.e. create and update requests...
     }
 
     @HandleBeforeCreate
     public void handleUserBeforeCreate(User user){
+        user.setUserId(UUID.randomUUID().toString());
+//        CALLED ONLY ONCE while, user creation....
         log.info("User creation in progress now !! {}", user.getUserId());
     }
 
