@@ -25,7 +25,7 @@ public class Configurations {
 
             @Override
             public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors){
-//                config.setBasePath(AppConstants.BASE_PATH);
+                config.setBasePath(AppConstants.BASE_PATH);
                 config.setDefaultPageSize(AppConstants.DEFAULT_PAGE_SIZE);
                 config.setReturnBodyOnCreate(true);
                 config.setReturnBodyOnDelete(false);
